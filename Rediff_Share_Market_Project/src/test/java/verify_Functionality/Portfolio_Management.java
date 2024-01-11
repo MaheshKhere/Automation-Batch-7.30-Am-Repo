@@ -2,7 +2,7 @@ package verify_Functionality;
 
 import org.testng.annotations.Test;
 
-public class Portfolio_Management {
+public class Portfolio_Management extends BaseClass{
   @Test
   public void create_portfolio() {
 	  System.out.println("create_portfolio");

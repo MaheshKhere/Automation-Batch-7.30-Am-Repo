@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="RediffTest">
+    <classes>
+       <class name="verify_Functionality.User_session">
+       <methods>
+       <include name ="do_login"> </include>
+       </methods>
+       </class>
+        
+      <class name="verify_Functionality.Portfolio_Management">
+      <methods>
+      <include name="create_portfolio"> </include>
+      </methods>
+      
+      </class>
+      
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

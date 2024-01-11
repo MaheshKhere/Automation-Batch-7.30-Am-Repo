@@ -1,6 +1,6 @@
 package functionality;
 
-public class Validation_Functionality {
+public class Validation_Functionality extends Generic_Functionality{
 
 	public void validate_title() {
 		

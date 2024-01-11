@@ -2,9 +2,10 @@ package verify_Functionality;
 
 import org.testng.annotations.Test;
 
-public class Stock_Management {
+public class Stock_Management extends BaseClass{
   @Test
   public void add_stock() {
+	 
 	  System.out.println("add_stock");
   }
   @Test

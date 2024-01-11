@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="RediffTest(failed)">
+    <classes>
+      <class name="verify_Functionality.User_session">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+          <include name="do_login"/>
+        </methods>
+      </class> <!-- verify_Functionality.User_session -->
+    </classes>
+  </test> <!-- RediffTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
