@@ -8,10 +8,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 public class BaseClass {
-	public Application_Functionality ap;
+	public Application_Functionality ap ;
 
 	@BeforeMethod
-	public void beforeMethod() {
+	public void beforeMethod() throws Exception {
+		//ap = new Application_Functionality();
 		System.out.println("beforeMethod");
 	}
 
@@ -20,6 +21,7 @@ public class BaseClass {
 		
 		// Initialize Properties file Through Constructor
 		ap = new Application_Functionality();
+
 		System.out.println("beforeTest");
 	}
 

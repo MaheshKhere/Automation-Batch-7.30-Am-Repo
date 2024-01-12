@@ -7,7 +7,7 @@
         <methods>
           <include name="beforeTest"/>
           <include name="beforeMethod"/>
-          <include name="do_login"/>
+          <include name="do_logout"/>
         </methods>
       </class> <!-- verify_Functionality.User_session -->
     </classes>

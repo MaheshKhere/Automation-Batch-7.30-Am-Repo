@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="RediffTest(failed)">
     <classes>
-      <class name="verify_Functionality.User_session">
+      <class name="verify_Functionality.Portfolio_Management">
         <methods>
           <include name="beforeTest"/>
+          <include name="create_portfolio"/>
           <include name="beforeMethod"/>
-          <include name="do_login"/>
         </methods>
-      </class> <!-- verify_Functionality.User_session -->
+      </class> <!-- verify_Functionality.Portfolio_Management -->
     </classes>
   </test> <!-- RediffTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

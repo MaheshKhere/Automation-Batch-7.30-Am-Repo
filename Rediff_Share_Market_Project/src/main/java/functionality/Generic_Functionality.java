@@ -43,6 +43,7 @@ public class Generic_Functionality {
 	public void click(String locator) {
 		// here click is performed on element
 		// Which came from getElement and by locator Method
+		System.out.println(locatorprop.getProperty(locator));
 		getElement(locator).click();
 	}
 
@@ -55,7 +56,12 @@ public class Generic_Functionality {
 	}
 
 	public void type(String locator, String Input_text) {
-		getElement(locator);
+		getElement(locator).sendKeys(uatprop.getProperty(Input_text));
+		
+	}
+	
+	public void clear(String locator) {
+		getElement(locator).clear();
 	}
 
 	
@@ -75,25 +81,25 @@ public class Generic_Functionality {
 		
 		// Here locatorkey is coming from locator properties file
 		if (locatorKey.endsWith("_id")) {
-			By.id(locatorprop.getProperty(locatorKey));
+			by =By.id(locatorprop.getProperty(locatorKey));
 
 		} else if (locatorKey.endsWith("_name")) {
-			By.name(locatorprop.getProperty(locatorKey));
+			by = By.name(locatorprop.getProperty(locatorKey));
 
 		} else if (locatorKey.endsWith("_className")) {
-			By.className(locatorprop.getProperty(locatorKey));
+			by =By.className(locatorprop.getProperty(locatorKey));
 
 		} else if (locatorKey.endsWith("_linktext")) {
-			By.linkText(locatorprop.getProperty(locatorKey));
+			by =By.linkText(locatorprop.getProperty(locatorKey));
 
 		} else if (locatorKey.endsWith("_partiallinktext")) {
-			By.partialLinkText(locatorprop.getProperty(locatorKey));
+			by =By.partialLinkText(locatorprop.getProperty(locatorKey));
 
 		} else if (locatorKey.endsWith("_cssSelector")) {
-			By.cssSelector(locatorprop.getProperty(locatorKey));
+			by =By.cssSelector(locatorprop.getProperty(locatorKey));
 
 		} else if (locatorKey.endsWith("_xpath")) {
-			By.xpath(locatorprop.getProperty(locatorKey));
+			by =By.xpath(locatorprop.getProperty(locatorKey));
 		}
 
 		return by;  // Return By class Variable
