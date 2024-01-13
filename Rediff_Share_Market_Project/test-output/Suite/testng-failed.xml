@@ -8,6 +8,7 @@
           <include name="beforeTest"/>
           <include name="create_portfolio"/>
           <include name="beforeMethod"/>
+          <include name="aftertest"/>
         </methods>
       </class> <!-- verify_Functionality.Portfolio_Management -->
     </classes>

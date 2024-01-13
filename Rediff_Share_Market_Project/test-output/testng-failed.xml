@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="RediffTest(failed)">
     <classes>
-      <class name="verify_Functionality.User_session">
+      <class name="verify_Functionality.Portfolio_Management">
         <methods>
           <include name="beforeTest"/>
+          <include name="create_portfolio"/>
           <include name="beforeMethod"/>
-          <include name="do_logout"/>
+          <include name="aftertest"/>
         </methods>
-      </class> <!-- verify_Functionality.User_session -->
+      </class> <!-- verify_Functionality.Portfolio_Management -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- RediffTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

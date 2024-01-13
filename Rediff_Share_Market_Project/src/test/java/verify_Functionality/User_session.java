@@ -2,10 +2,15 @@ package verify_Functionality;
 
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
+
 public class User_session extends BaseClass {
 	@Test(priority = 1)
 	public void do_login() throws Exception {
 
+		test = rep.createTest("do login");
+		
+		test.log(Status.INFO, "Login...");
 		// Enter properties file String key is equal to chrome
 		ap.open_browser("chromebrowser");
 

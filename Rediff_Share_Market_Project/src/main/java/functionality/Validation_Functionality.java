@@ -22,10 +22,5 @@ public class Validation_Functionality extends Generic_Functionality{
 	}
 	
 	
-	public void screenshot(String screenshotname) throws Exception {
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File src = ts.getScreenshotAs(OutputType.FILE);
-		File trg = new File(projectpath+"\\Screenshot\\"+screenshotname+".png");
-		FileHandler.copy(src, trg);
-	}
+
 }
