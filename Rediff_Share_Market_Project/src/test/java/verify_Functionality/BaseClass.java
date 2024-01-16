@@ -14,17 +14,17 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 public class BaseClass {
-	public Application_Functionality ap;
+	public Application_Functionality af;
 	public ExtentReports rep;
 	public ExtentTest test;
 
 	@BeforeMethod
 	public void beforeMethod(ITestContext context) throws Exception {
 
-		// pass ap variable
-		ap = (Application_Functionality) context.getAttribute("ap");
+		// Get ap reference variable which transfer to All Test Annotation
+		af = (Application_Functionality) context.getAttribute("af");
 
-		// pass test variable
+		 // Get test reference variable which transfer to All Test Annotation
 		test = (ExtentTest) context.getAttribute("test");
 		
 	}
@@ -33,21 +33,30 @@ public class BaseClass {
 	public void beforeTest(ITestContext context) throws Exception {
 
 		// Initialize Properties file Through Constructor
-		ap = new Application_Functionality();
-
-		// set ap reference variable
-		context.setAttribute("ap", ap);
-
-		// Initialize report
-		 rep =ap.create_extent_report();
+		af = new Application_Functionality();
 		
 		
+		// Pass af Reference variable To before Method
+		context.setAttribute("af", af);
+
+		// Initialize Extent report
+		 rep =af.create_extent_report();
+		 
+		 // create test for report
+		test= rep.createTest("Do Login");
+		  
+		// Pass test Reference variable To before Method
 		context.setAttribute("test", test);
+		
+		af.setlog(test);
+		
 		
 	}
 
 	@AfterTest
 	public void aftertest() {
+		
+		// To Stop Monitoring of extent Report
 		rep.flush();
 
 	}

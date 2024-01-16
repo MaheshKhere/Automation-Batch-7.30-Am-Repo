@@ -6,7 +6,7 @@
       <class name="verify_Functionality.Portfolio_Management">
         <methods>
           <include name="beforeTest"/>
-          <include name="create_portfolio"/>
+          <include name="delete_portfolio"/>
           <include name="beforeMethod"/>
           <include name="aftertest"/>
         </methods>

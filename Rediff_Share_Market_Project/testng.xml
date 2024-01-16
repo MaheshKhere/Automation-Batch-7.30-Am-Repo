@@ -11,7 +11,8 @@
         
       <class name="verify_Functionality.Portfolio_Management">
       <methods>
-      <include name="create_portfolio"> </include>
+     
+      <include name="delete_portfolio"> </include>
       </methods>
       
       </class>

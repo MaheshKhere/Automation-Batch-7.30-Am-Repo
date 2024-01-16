@@ -10,6 +10,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 public class Generic_Functionality {
 
@@ -19,9 +23,16 @@ public class Generic_Functionality {
 	public Properties locatorprop;
 	public FileInputStream fis;
 	public WebDriver driver;
+	public ExtentTest test;
+	public Select s;
 
+	
 	public void open_browser(String browser) {
 		System.out.println("Launched Browser Is:- " + uatprop.getProperty(browser));
+		
+		// To generate logs in report 
+		test.log(Status.INFO, "Launched Browser Is:- " + uatprop.getProperty(browser));
+		
 		if (uatprop.getProperty(browser).equalsIgnoreCase("chrome")) {
 			// chromebrowser=chrome
 			driver = new ChromeDriver();
@@ -36,6 +47,10 @@ public class Generic_Functionality {
 	}
 
 	public void navigate(String url) {
+		System.out.println("Navigated Url is :- "+uatprop.getProperty(url));
+		
+		test.log(Status.INFO, "Navigated Url is Is:- " + uatprop.getProperty(url));
+
 		driver.get(uatprop.getProperty(url));
 
 	}
@@ -43,7 +58,12 @@ public class Generic_Functionality {
 	public void click(String locator) {
 		// here click is performed on element
 		// Which came from getElement and by locator Method
-		System.out.println(locatorprop.getProperty(locator));
+		System.out.println("Clicked On WebElement is:- "+locatorprop.getProperty(locator));
+		
+		test.log(Status.INFO, "Got WebElement is :- "+ locatorprop.getProperty(locator));
+
+		
+		test.log(Status.INFO, "Clicked on WebElement is :- "+ locatorprop.getProperty(locator));
 		getElement(locator).click();
 	}
 
@@ -56,11 +76,16 @@ public class Generic_Functionality {
 	}
 
 	public void type(String locator, String Input_text) {
+		test.log(Status.INFO, "Clicked on WebElement is :- "+ locatorprop.getProperty(locator));
+		
+		test.log(Status.INFO, "Entered Text is :- "+ uatprop.getProperty(Input_text));
 		getElement(locator).sendKeys(uatprop.getProperty(Input_text));
 		
 	}
 	
 	public void clear(String locator) {
+		
+		test.log(Status.INFO, "Cleared WebElement is :- "+locatorprop.getProperty(locator));
 		getElement(locator).clear();
 	}
 
@@ -105,4 +130,10 @@ public class Generic_Functionality {
 		return by;  // Return By class Variable
 	}
 
+	
+	
+	// To generate logs for every step
+	public void setlog(ExtentTest test) {
+		this.test=test;
+	}
 }
