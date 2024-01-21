@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-29T03:20:17Z" name="Default suite" finished-at="2023-12-29T03:20:36Z" duration-ms="18998">
+    <groups>
+    </groups>
+    <test started-at="2023-12-29T03:20:17Z" name="Default test" finished-at="2023-12-29T03:20:36Z" duration-ms="18998">
+      <class name="file_upload.File_Upload_Using_Robot_class">
+        <test-method is-config="true" signature="launchMethod()[pri:0, instance:file_upload.File_Upload_Using_Robot_class@1984b1f]" started-at="2023-12-29T03:20:17Z" name="launchMethod" finished-at="2023-12-29T03:20:35Z" duration-ms="17232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchMethod -->
+        <test-method signature="verify_File_upload()[pri:0, instance:file_upload.File_Upload_Using_Robot_class@1984b1f]" started-at="2023-12-29T03:20:35Z" name="verify_File_upload" finished-at="2023-12-29T03:20:36Z" duration-ms="1740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_File_upload -->
+      </class> <!-- file_upload.File_Upload_Using_Robot_class -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
